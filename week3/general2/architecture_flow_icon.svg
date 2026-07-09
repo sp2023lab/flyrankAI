@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="Architecture flow icon">
+  <rect width="512" height="512" rx="96" fill="#F8FAFC"/>
+  <rect x="84" y="132" width="116" height="82" rx="18" fill="none" stroke="#2563EB" stroke-width="18"/>
+  <rect x="312" y="132" width="116" height="82" rx="18" fill="none" stroke="#14B8A6" stroke-width="18"/>
+  <rect x="84" y="306" width="116" height="82" rx="18" fill="none" stroke="#0F172A" stroke-width="18" opacity="0.85"/>
+  <rect x="312" y="306" width="116" height="82" rx="18" fill="none" stroke="#2563EB" stroke-width="18"/>
+  <path d="M204 173 H304" stroke="#CBD5E1" stroke-width="16" stroke-linecap="round"/>
+  <path d="M370 218 V298" stroke="#CBD5E1" stroke-width="16" stroke-linecap="round"/>
+  <path d="M308 347 H204" stroke="#CBD5E1" stroke-width="16" stroke-linecap="round"/>
+  <path d="M142 302 V218" stroke="#CBD5E1" stroke-width="16" stroke-linecap="round"/>
+</svg>

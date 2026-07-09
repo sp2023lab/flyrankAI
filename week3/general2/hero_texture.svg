@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-label="Abstract technical hero texture">
+  <rect width="1600" height="900" fill="#F8FAFC"/>
+  <defs>
+    <pattern id="grid" width="64" height="64" patternUnits="userSpaceOnUse">
+      <path d="M 64 0 L 0 0 0 64" fill="none" stroke="#CBD5E1" stroke-width="1" opacity="0.45"/>
+    </pattern>
+    <radialGradient id="glow" cx="50%" cy="45%" r="60%">
+      <stop offset="0%" stop-color="#2563EB" stop-opacity="0.16"/>
+      <stop offset="45%" stop-color="#14B8A6" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#F8FAFC" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#grid)"/>
+  <rect width="1600" height="900" fill="url(#glow)"/>
+  <path d="M250 620 C420 470 580 710 760 540 C930 380 1090 500 1320 300" fill="none" stroke="#2563EB" stroke-width="8" stroke-linecap="round" opacity="0.55"/>
+  <path d="M330 360 C510 270 680 430 850 300 C1020 175 1190 245 1360 170" fill="none" stroke="#14B8A6" stroke-width="6" stroke-linecap="round" opacity="0.45"/>
+  <circle cx="250" cy="620" r="14" fill="#2563EB"/>
+  <circle cx="760" cy="540" r="14" fill="#2563EB"/>
+  <circle cx="1320" cy="300" r="14" fill="#2563EB"/>
+  <circle cx="330" cy="360" r="11" fill="#14B8A6"/>
+  <circle cx="850" cy="300" r="11" fill="#14B8A6"/>
+  <circle cx="1360" cy="170" r="11" fill="#14B8A6"/>
+  <text x="110" y="790" font-family="Inter, Arial, sans-serif" font-size="34" fill="#0F172A" opacity="0.55">reliable backend + AI systems</text>
+</svg>

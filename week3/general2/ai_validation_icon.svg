@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="AI validation icon">
+  <rect width="512" height="512" rx="96" fill="#F8FAFC"/>
+  <circle cx="256" cy="220" r="104" fill="none" stroke="#2563EB" stroke-width="22"/>
+  <path d="M203 220 L241 258 L315 176" fill="none" stroke="#14B8A6" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M154 372 H358" stroke="#0F172A" stroke-width="20" stroke-linecap="round" opacity="0.88"/>
+  <path d="M190 412 H322" stroke="#0F172A" stroke-width="16" stroke-linecap="round" opacity="0.55"/>
+</svg>
