@@ -1,0 +1,14 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# Environment and editor files
+.env
+.vscode/
+.idea/
+
+# Generated scrape output
+*.tmp
