@@ -1,0 +1,20 @@
+Verification performed locally:
+
+PYTHONPATH=. pytest -q
+Result: 10 passed
+
+PYTHONPATH=. pytest --cov=app --cov-report=term-missing -q
+Result: 10 passed; 81% total application coverage
+
+python -m compileall -q app tests
+Result: passed
+
+Covered BE-06 behaviours:
+- POST returns immediately with HTTP 202, Location and status URL
+- Duplicate Idempotency-Key reuses the original job and enqueues once
+- Worker stores a schema-validated result and marks the job completed
+- Completed jobs are safe under duplicate worker delivery
+- Retryable failures move to retrying and increment attempts
+- Exhausted failures become failed and trigger the alert seam
+- Unknown AI job IDs return 404
+- Existing PDF report pipeline remains passing

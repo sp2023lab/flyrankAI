@@ -1,0 +1,7 @@
+Implemented the existing Groq summarisation operation as a persistent Celery background job.
+
+POST /api/v1/summarize now validates and stores the request, enqueues only the job ID, and immediately returns HTTP 202 Accepted with Location, Retry-After and a status URL. GET /api/v1/ai-jobs/{job_id} reports queued, running, retrying, completed or failed state and exposes the validated three-bullet result after completion.
+
+Duplicate client submissions are protected by the Idempotency-Key header. Duplicate worker delivery is protected by atomic database claiming and terminal-state checks. Retryable provider, timeout and invalid-output failures use bounded exponential backoff; non-retryable or exhausted jobs are persisted as failed. Permanent failures emit a structured critical alert and can optionally call an alert webhook.
+
+The existing PostgreSQL, Redis, Celery, Docker Compose and PDF report pipeline remain intact. Tests use SQLite, an in-memory Celery configuration and mocked AI providers.
