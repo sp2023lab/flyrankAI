@@ -1,0 +1,9 @@
+Implemented a FastAPI authentication service with persistent SQLAlchemy/SQLite storage.
+
+Users can register with a username, email and password. Passwords are hashed with Argon2 using pwdlib and the plaintext password is never stored or returned. Login accepts a username or email and returns an expiring signed JWT bearer token.
+
+The GET /protected route depends on the authenticated current user. Missing, malformed, expired or unverifiable credentials return 401 Unauthorized with a Bearer challenge. A valid token belonging to an inactive account returns 403 Forbidden. The POST /auth/deactivate endpoint makes the 403 path straightforward for reviewers to reproduce.
+
+Additional endpoints: GET /auth/me and GET /health. Swagger/OpenAPI documentation is available at /docs.
+
+Automated pytest coverage includes registration, password hashing, duplicate registration, successful login, bad-password 401, missing-token 401, invalid-token 401, successful protected access, and inactive-user 403.

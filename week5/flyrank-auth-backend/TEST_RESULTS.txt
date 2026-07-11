@@ -1,0 +1,14 @@
+Verification performed locally:
+
+Command: python -m pytest -q
+Result: 8 passed in 1.17s
+
+Covered behaviours:
+- Password is hashed rather than stored as plaintext
+- Duplicate registration returns 409
+- Login by email/username returns a bearer token
+- Incorrect password returns 401
+- Missing token returns 401
+- Invalid token returns 401
+- Authenticated user can access /protected
+- Inactive authenticated user receives 403
