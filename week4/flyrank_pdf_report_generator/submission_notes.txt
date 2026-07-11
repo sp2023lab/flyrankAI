@@ -1,0 +1,18 @@
+Built a production-style asynchronous PDF report pipeline using FastAPI, PostgreSQL, Redis, Celery and ReportLab.
+
+Core flow:
+1. Seed or query order data stored in PostgreSQL.
+2. POST /api/v1/reports creates a queued job and returns HTTP 202.
+3. A separate Celery worker aggregates the data with SQL and renders a PDF.
+4. The PDF is stored as an artifact in a shared volume; only metadata/path is stored in the database.
+5. GET /api/v1/jobs/{job_id} exposes queued/running/completed/failed state.
+6. Completed jobs include a direct PDF download URL.
+
+The repository includes Docker Compose, health checks, automated tests, Swagger documentation, failure-state handling and an optional Celery Beat scheduled-report stretch feature.
+
+Reviewer demo:
+- Open /docs
+- POST /api/v1/demo/orders/seed
+- POST /api/v1/reports
+- Poll the returned status_url
+- Open the returned download_url when status is completed
