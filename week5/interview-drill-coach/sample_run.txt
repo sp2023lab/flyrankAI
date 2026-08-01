@@ -1,0 +1,38 @@
+
+Session 27b26a6e started
+Topic: backend projects WebSockets SQLAlchemy | Difficulty: medium | Questions: 2
+[tool] interview_get_progress -> no previous scores
+
+[tool] interview_search_notes -> 3 matches from cv.md, projects.md, technical_notes.md
+
+Question 1/2 [websockets]
+In your FastAPI WebSocket stock ticker, how did persistent bidirectional communication change the design compared with a normal REST endpoint?
+Your answer: [tool] interview_save_result -> saved score 5/5
+Score: 5/5
+Correctness: The answer includes relevant technical concepts.
+Completeness: Coverage is proportionate to the number of key ideas included.
+Clarity: The response is understandable but can be made more structured.
+Evidence: A concrete implementation detail would strengthen the answer.
+Main improvement: State the design choice, why it was needed, and one concrete consequence.
+Next action: increase_difficulty
+
+[tool] interview_search_notes -> 3 matches from cv.md, projects.md, technical_notes.md
+
+Question 2/2 [databases]
+How did the Repository and Unit of Work patterns separate database access from transaction control in your async SQLAlchemy work?
+Your answer: [tool] interview_save_result -> saved score 4/5
+Score: 4/5
+Correctness: The answer includes relevant technical concepts.
+Completeness: Coverage is proportionate to the number of key ideas included.
+Clarity: The response is understandable but can be made more structured.
+Evidence: A concrete implementation detail would strengthen the answer.
+Main improvement: State the design choice, why it was needed, and one concrete consequence.
+Next action: end_session
+
+[tool] interview_end_session -> report generated and session completed
+
+=== Session report ===
+Average score: 4.50/5
+Strongest areas: websockets; databases
+Improvement areas: databases; websockets
+Next focus: Revisit databases with deeper follow-ups.
