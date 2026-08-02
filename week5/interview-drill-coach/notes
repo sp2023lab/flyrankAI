@@ -1,0 +1,8 @@
+1. python -m pip install -r requirements.txt
+2. python -c "from dotenv import load_dotenv; import os; load_dotenv(); print('API key loaded:', bool(os.getenv('OPENAI_API_KEY'))); print('Provider:', os.getenv('AGENT_PROVIDER')); print('Model:', os.getenv('OPENAI_MODEL'))"
+3. python -m pytest
+4. python -m app.main --provider mock --topic "backend projects" --difficulty medium --questions 2
+5. Get-Content .\data\progress.json
+6. '{"sessions":[],"topic_scores":{}}' | Set-Content .\data\progress.json
+7. Get-Content .\data\progress.json
+8. python -m app.main --provider openai --topic "backend projects" --difficulty medium --questions 2
