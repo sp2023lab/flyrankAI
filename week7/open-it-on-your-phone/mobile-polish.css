@@ -1,0 +1,53 @@
+/* Week 7 mobile polish: improves scanability, contrast and diagram usability. */
+
+:root {
+  --subtle: #8592a8;
+}
+
+.hero-links a {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  padding: 6px 2px;
+}
+
+.case-visual img {
+  cursor: zoom-in;
+}
+
+.image-hint {
+  margin: 12px 0 0;
+  color: var(--subtle);
+  font-size: .9rem;
+  text-align: center;
+}
+
+@media (max-width: 480px) {
+  h1,
+  .case-hero h1 {
+    font-size: clamp(2.6rem, 12vw, 3.45rem);
+  }
+
+  .section {
+    padding: 56px 0;
+  }
+
+  .project-card .project-number {
+    margin-bottom: 28px;
+  }
+
+  .case-section {
+    padding-bottom: 42px;
+    margin-bottom: 42px;
+  }
+
+  .breadcrumb {
+    row-gap: 4px;
+  }
+}
+
+@media (max-width: 400px) {
+  .breadcrumb span:last-child {
+    display: none;
+  }
+}
