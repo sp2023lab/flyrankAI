@@ -1,0 +1,22 @@
+# Phase 1 Checklist
+
+- [x] Problem and actors defined
+- [x] Three request paths separated
+- [x] Core scope defined
+- [x] Explicit non-goals defined
+- [x] Data model and indexes designed
+- [x] Authentication and tenancy policy chosen
+- [x] API surface and status codes designed
+- [x] Embed flow documented
+- [x] CORS strategy documented
+- [x] Cache policy documented
+- [x] Rate limiting and spam strategy documented
+- [x] Geo fallback behaviour documented
+- [x] Safe notification side effect designed
+- [x] Background job and retry model designed
+- [x] Idempotency strategy documented
+- [x] Test plan documented
+- [ ] Human review completed
+- [ ] Public GitHub repository created
+- [ ] Initial commit pushed
+- [ ] Design approved before Phase 2

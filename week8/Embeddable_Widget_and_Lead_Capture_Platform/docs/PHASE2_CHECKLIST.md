@@ -1,0 +1,24 @@
+# Phase 2 Checklist
+
+- [x] PostgreSQL models for tenant/widget/submission/notification job
+- [x] Alembic migration
+- [x] Seed tenant + widget
+- [x] Hashed API-key owner authentication
+- [x] Tenant-scoped widget create/list/get
+- [x] Public config lookup
+- [x] Public submission `POST`
+- [x] CORS `OPTIONS` preflight
+- [x] Exact per-widget origin allowlist
+- [x] Bounded request body + `413`
+- [x] Pydantic boundary shape validation
+- [x] Dynamic field validation
+- [x] Per-widget+IP and per-widget Redis limits
+- [x] Honeypot spam drop
+- [x] Geo provider A/B fallback
+- [x] All geo providers down -> store anyway
+- [x] Atomic submission + notification outbox
+- [x] Background notification worker and retries
+- [x] Idempotency unique constraint and replay handling
+- [x] Deterministic unit tests
+- [ ] Run Docker acceptance gate locally and paste output into EVIDENCE.md
+- [ ] Commit and push Phase 2 in the public repository
