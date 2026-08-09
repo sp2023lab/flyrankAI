@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Second-origin demo site for the FlyRank embeddable lead-capture widget.">
+  <title>Customer Site — FlyRank Widget Demo</title>
+  <style>
+    :root { color-scheme: light; }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: #172033;
+      background: #f5f7fb;
+    }
+    .shell {
+      width: min(920px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 64px 0 96px;
+    }
+    .eyebrow {
+      margin: 0 0 10px;
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: #5c6ac4;
+    }
+    h1 {
+      max-width: 700px;
+      margin: 0;
+      font-size: clamp(2rem, 6vw, 3.7rem);
+      line-height: 1.02;
+      letter-spacing: -.04em;
+    }
+    .intro {
+      max-width: 700px;
+      margin: 20px 0 0;
+      font-size: 1.05rem;
+      line-height: 1.7;
+      color: #566076;
+    }
+    .demo-card {
+      margin-top: 42px;
+      padding: 28px;
+      border: 1px solid #dfe4ef;
+      border-radius: 22px;
+      background: #fff;
+      box-shadow: 0 18px 50px rgba(23, 32, 51, .08);
+    }
+    .demo-card h2 { margin-top: 0; }
+    .origin {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 7px 10px;
+      border-radius: 8px;
+      background: #eef1f7;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: .9rem;
+    }
+    .hint {
+      margin-top: 22px;
+      color: #6a7283;
+      font-size: .9rem;
+    }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <p class="eyebrow">External customer website</p>
+    <h1>The form below is injected by one embeddable script.</h1>
+    <p class="intro">
+      This page is intentionally served from <strong>http://localhost:5500</strong>, while the
+      FlyRank API and widget bundle are served from <strong>http://localhost:8001</strong>.
+      That makes this a real second-origin browser demo of the Phase 2 CORS and submission path.
+    </p>
+
+    <section class="demo-card" aria-labelledby="demo-heading">
+      <h2 id="demo-heading">Contact us</h2>
+      <p>The content below is rendered by <code>widget.v1.js</code>.</p>
+      <span class="origin">localhost:5500 → localhost:8001</span>
+
+      <!--
+        Current seeded public widget ID from the Phase 2 environment.
+        If you reset PostgreSQL and reseed, replace this id with the new
+        widget_public_id printed by: docker compose exec api python -m app.scripts.seed
+      -->
+      <script src="http://localhost:8001/assets/widget.v1.js?id=380f2da6-d38d-4bcc-b3e3-53822a2faee4"></script>
+
+      <p class="hint">
+        Demo tip: submit a real-looking name/email/message, then open the owner dashboard to
+        show the stored row and geo enrichment.
+      </p>
+    </section>
+  </main>
+</body>
+</html>

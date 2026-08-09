@@ -9,8 +9,38 @@ from app.db.models import Widget
 from app.db.session import SessionFactory
 from app.schemas.widgets import WidgetCreate, WidgetOut
 
+from app.core.config import get_settings
+
+
+settings = get_settings()
 router = APIRouter(prefix="/api/v1/widgets", tags=["widgets"])
 
+@router.get("/{widget_id}/embed")
+async def get_embed_snippet(
+    widget_id: UUID,
+    tenant_id=Depends(require_tenant_id),
+):
+    async with SessionFactory() as session:
+        row = await session.scalar(
+            select(Widget).where(
+                Widget.id == widget_id,
+                Widget.tenant_id == tenant_id,
+            )
+        )
+
+        if not row:
+            raise HTTPException(status_code=404, detail="Widget not found")
+
+        snippet = (
+            f'<script src="{settings.public_base_url}/assets/widget.v1.js'
+            f'?id={row.public_id}"></script>'
+        )
+
+        return {
+            "widget_id": row.id,
+            "public_id": row.public_id,
+            "embed": snippet,
+        }
 
 @router.post("", response_model=WidgetOut, status_code=201)
 async def create_widget(body: WidgetCreate, tenant_id=Depends(require_tenant_id)):
